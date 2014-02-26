@@ -1,0 +1,64 @@
+<a class="btn btn-primary" onclick="toggleBtn()">Comprar Ingressos</a>
+<div id="toggle-effect" hidden="true">
+  <br>
+  <%#= render :partial => "transacao/new" %>
+</div>
+<script>
+    function toggleBtn() {
+        $('#toggle-effect').toggle('slow', function () {
+        });
+    }
+</script>
+
+<form action="pagina.php" method="post">
+  <table class="table table-bordered" cellpadding="4" cellspacing="0" border="1">
+    <thead>
+        <tr>
+          <td>Nome</td>
+          <td>RG</td>
+          <td> </td>
+        </tr>
+    </thead>
+    <tbody id="repetir">
+        <tr id="linha_1">
+          <td><input type="text" name="nome[]" value="" /></td>
+          <td><input type="text" name="rg[]" value="" /></td>
+          <td><input type="button" value="Remover" id="remove" onclick="$.removeLinha(this);" /></td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+          <td align="right" colspan="5"><input type="button" value="Adicionar" id="add" /><input type="submit" value="Enviar" /></td>
+        </tr>
+    </tfoot>
+  </table>
+</form>
+
+
+
+
+
+<script>
+    $.removeLinha = function (element){
+        var linha_total = $('tbody#repetir tr').length;
+        if (linha_total > 1){
+            $(element).parent().parent().remove();
+        }else{
+            alert("Desculpe, mas você não pode remover esta última linha!");
+        }
+    };
+    $(document).ready(function()    {
+        var limite_linhas = 20;
+        $('#add').click(function(){
+            var linha_total = $('tbody#repetir tr').length;
+            if (limite_linhas && limite_linhas > linha_total){
+                var linha = $('tbody#repetir tr').html();
+                var linha_total = $('tbody#repetir tr').length;
+                var linha_id = $('tbody#repetir tr').attr('id');
+                $('tbody#repetir').append('<tr id="linha_' + (linha_total + 1) + '">' + linha + '</tr>');
+            }else{
+                alert("Desculpe, mas você só pode adicionar até " + limite_linhas + " linhas!");
+            }
+        });
+    });
+</script>
