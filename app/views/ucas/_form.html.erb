@@ -1,0 +1,46 @@
+<%= form_for(@uca) do |f| %>
+
+  <div class="field">
+    <%= f.label :matricula %><br>
+    <%= f.number_field :matricula %>
+  </div>
+  <div class="field">
+    <%= f.label :curso %><br>
+    <%= f.text_field :curso %>
+  </div>
+  <div class="field">
+    <%= f.label :periodo %><br>
+    <%= f.number_field :periodo %>
+  </div>
+    <div class="field">
+      <%= f.label :email %><br>
+      <%= f.text_field :email %>
+    </div>
+    <div class="field">
+      <label>Linguagens Conhecidas</label><br>
+      <% @dev_langs.each do |lang| %>
+          <li>
+            <%= check_box_tag 'dev_lang[lang_known_ids][]', lang.id -%>
+            <%= h lang.nome -%>
+          </li>
+      <% end %>
+    </div>
+    <div class="field">
+      <label>Interesse</label><br>
+      <% @dev_langs.each do |lang| %>
+          <li>
+            <%= check_box_tag 'dev_lang[lang_ids][]', lang.id -%>
+            <%= h lang.nome -%>
+          </li>
+      <% end %>
+    </div>
+
+
+
+
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

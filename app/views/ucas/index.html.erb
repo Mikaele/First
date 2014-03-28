@@ -1,0 +1,31 @@
+<h1>Listing ucas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Matricula</th>
+      <th>Curso</th>
+      <th>Periodo</th>
+      <th>Email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ucas.each do |uca| %>
+      <tr>
+        <td><%= uca.matricula %></td>
+        <td><%= uca.curso %></td>
+        <td><%= uca.periodo %></td>
+        <td><%= uca.email %></td>
+        <td><%= link_to 'Show', uca %></td>
+        <td><%#= link_to 'Edit', edit_uca_path(uca) %></td>
+        <td><%#= link_to 'Destroy', uca, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Uca', new_uca_path %>

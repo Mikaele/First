@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  resources :dev_langs
+
+  #resources :dev_langs
+
+  resources :ucas
+
   get 'home/index'
 
   #devise_for :usuarios

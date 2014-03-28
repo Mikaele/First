@@ -39,7 +39,7 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 # Autenticação (LogIn LogOut) de usuários
-gem 'devise'
+#gem 'devise'
 
 #gem 'paperclip'
 #gem 'bootstrap'

@@ -15,7 +15,7 @@ default: &default
   pool: 5
   username: root
   password:
-  socket: /opt/lampp/var/mysql/mysql.sock
+  socket: /Applications/XAMPP/xamppfiles/var/mysql/mysql.sock
 
 development:
   <<: *default

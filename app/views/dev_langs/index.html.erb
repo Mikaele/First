@@ -1,0 +1,27 @@
+<h1>Listing dev_langs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Obs</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dev_langs.each do |dev_lang| %>
+      <tr>
+        <td><%= dev_lang.nome %></td>
+        <td><%= dev_lang.obs %></td>
+        <td><%= link_to 'Show', dev_lang %></td>
+        <td><%= link_to 'Edit', edit_dev_lang_path(dev_lang) %></td>
+        <td><%= link_to 'Destroy', dev_lang, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dev lang', new_dev_lang_path %>

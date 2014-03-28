@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Matricula:</strong>
+  <%= @uca.matricula %>
+</p>
+
+<p>
+  <strong>Curso:</strong>
+  <%= @uca.curso %>
+</p>
+
+<p>
+  <strong>Periodo:</strong>
+  <%= @uca.periodo %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @uca.email %>
+</p>
+
+<%= link_to 'Edit', edit_uca_path(@uca) %> |
+<%= link_to 'Back', ucas_path %>

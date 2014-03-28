@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @dev_lang.nome %>
+</p>
+
+<p>
+  <strong>Obs:</strong>
+  <%= @dev_lang.obs %>
+</p>
+
+<%= link_to 'Edit', edit_dev_lang_path(@dev_lang) %> |
+<%= link_to 'Back', dev_langs_path %>
