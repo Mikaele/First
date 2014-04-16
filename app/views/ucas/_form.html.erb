@@ -18,18 +18,18 @@
     </div>
     <div class="field">
       <label>Linguagens Conhecidas</label><br>
-      <% @dev_langs.each do |lang| %>
+      <% @langs.each do |lang| %>
           <li>
-            <%= check_box_tag 'dev_lang[lang_known_ids][]', lang.id -%>
+            <%= check_box_tag 'uca[lang_know_ids][]', lang.id -%>
             <%= h lang.nome -%>
           </li>
       <% end %>
     </div>
     <div class="field">
       <label>Interesse</label><br>
-      <% @dev_langs.each do |lang| %>
+      <% @langs.each do |lang| %>
           <li>
-            <%= check_box_tag 'dev_lang[lang_ids][]', lang.id -%>
+            <%= check_box_tag 'uca[lang_ids][]', lang.id -%>
             <%= h lang.nome -%>
           </li>
       <% end %>

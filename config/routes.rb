@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :langs
+
   resources :dev_langs
 
   #resources :dev_langs

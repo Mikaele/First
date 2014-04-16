@@ -10,7 +10,7 @@ class UcasController < ApplicationController
 
   def new
     @uca = Uca.new
-    @dev_langs = DevLang.all
+    @langs = Lang.all
     @lang=DevLang.new
   end
 
@@ -28,14 +28,14 @@ class UcasController < ApplicationController
 
   def create
     @uca = Uca.new(uca_params)
-    langs_ids = []
-    #@uca.interests.new(lang_params)
-    lang_params.each do |lang|
-      langs_ids<<@uca.interests.new(lang)
-    end
+   # langs_ids = []
+   # #@uca.interests.new(lang_params)
+   # lang_params.each do |lang|
+    #  langs_ids<<@uca.interests.new(lang)
+   # end
 
     respond_to do |format|
-      if @uca.save and save_interests(langs_ids)# and @uca.interests.create(lang_params)
+      if @uca.save# and save_interests(langs_ids)# and @uca.interests.create(lang_params)
         format.html { redirect_to @uca, notice: 'Uca was successfully created.' }
         format.json { render action: 'show', status: :created, location: @uca }
       else
@@ -73,11 +73,11 @@ class UcasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def uca_params
-      params.require(:uca).permit(:matricula, :curso, :periodo, :email, :lang_interest_ids)
+      params.require(:uca).permit(:matricula, :curso, :periodo, :email, :lang_ids=>[],:lang_know_id=>[])
     end
 
-    def lang_params
-      params.require(:dev_lang).permit(:lang_ids)
-    end
+   # def lang_params
+   #   params.require(:dev_lang).permit(:lang_ids)
+   # end
 
 end
