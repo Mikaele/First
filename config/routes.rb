@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   resources :langs
+  resources :knows
 
   resources :dev_langs
 
