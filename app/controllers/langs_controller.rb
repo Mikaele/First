@@ -28,6 +28,7 @@ class LangsController < ApplicationController
 
     respond_to do |format|
       if @lang.save
+        @know=Know.create(:nome=>@lang.nome)
         format.html { redirect_to @lang, notice: 'Lang was successfully created.' }
         format.json { render :show, status: :created, location: @lang }
       else

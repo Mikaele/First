@@ -20,7 +20,7 @@
       <label>Linguagens Conhecidas</label><br>
       <% @langs.each do |lang| %>
           <li>
-            <%= check_box_tag 'uca[lang_know_ids][]', lang.id -%>
+            <%= check_box_tag 'uca[know_ids][]', lang.id -%>
             <%= h lang.nome -%>
           </li>
       <% end %>

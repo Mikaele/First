@@ -28,12 +28,6 @@ class UcasController < ApplicationController
 
   def create
     @uca = Uca.new(uca_params)
-   # langs_ids = []
-   # #@uca.interests.new(lang_params)
-   # lang_params.each do |lang|
-    #  langs_ids<<@uca.interests.new(lang)
-   # end
-
     respond_to do |format|
       if @uca.save# and save_interests(langs_ids)# and @uca.interests.create(lang_params)
         format.html { redirect_to @uca, notice: 'Uca was successfully created.' }
@@ -73,7 +67,7 @@ class UcasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def uca_params
-      params.require(:uca).permit(:matricula, :curso, :periodo, :email, :lang_ids=>[],:lang_know_id=>[])
+      params.require(:uca).permit(:matricula, :curso, :periodo, :email, :lang_ids=>[],:know_ids=>[])
     end
 
    # def lang_params

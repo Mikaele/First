@@ -1,10 +1,9 @@
 class KnowUcas < ActiveRecord::Migration
   def change
-    create_table :know, :id=>false  do |t|
+    create_table :knows_ucas, :id=>false  do |t|
       t.references :uca, index: true
-      t.integer :lang_know_id, index: true
+      t.references :know, index: true
     end
-    add_index :know, [:uca_id,:lang_know_id],:unique => true
-
+    add_index :knows_ucas, [:uca_id,:know_id],:unique => true
   end
 end
