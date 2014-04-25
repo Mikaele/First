@@ -14,3 +14,62 @@
  *= require_self
  *= require bootstrap
  */
+body {
+    padding-bottom: 40px;
+    padding-top: 20px;
+}
+.container-narrow {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #000000;
+    border-color: #CCCCCC #AAAAAA #999999 #BBBBBB;
+    border-image: none;
+    border-left: 13px solid #BBBBBB;
+    border-radius: 20.05px;
+    border-style: solid;
+    border-width: 13px;
+    color: #F8FFFF;
+    font-family: monospace;
+    margin: 0 auto;
+    max-width: 700px;
+}
+.container-narrow > hr {
+    margin: 30px 0;
+}
+.jumbotron {
+    margin: 60px 0;
+    text-align: center;
+}
+.jumbotron h1 {
+    font-size: 72px;
+    line-height: 1;
+}
+.jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+}
+.marketing {
+    margin: 60px 0;
+}
+.marketing p + h4 {
+    margin-top: 28px;
+}
+.green {
+    background-image: url("bg.png");
+    border-bottom: 0.5px dotted #D1D1D0;
+    border-top: 0.5px dotted #D1D1D0;
+    padding: 10px;
+}
+.grupo {
+    padding: 15px 0;
+}
+.coluna_esq {
+    border-right: 1px solid;
+}
+.vip {
+    opacity: 0.5;
+}.vip:hover {
+    opacity: 1;
+}

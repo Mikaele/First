@@ -1,64 +1,102 @@
-<a class="btn btn-primary" onclick="toggleBtn()">Comprar Ingressos</a>
-<div id="toggle-effect" hidden="true">
-  <br>
-  <%#= render :partial => "transacao/new" %>
+
+<div class="container">
+
+  <div class="masthead">
+    <ul class="nav nav-pills pull-right">
+      <li class="active"><a href="#">Sobre</a></li>
+      <li><a href="#">Palestras</a></li>
+      <li><a href="#">Patrocinadores</a></li>
+      <li><a href="#">Inscreva-se</a></li>
+    </ul>
+    <h3 class="muted">UCA</h3>
+  </div>
 </div>
-<script>
-    function toggleBtn() {
-        $('#toggle-effect').toggle('slow', function () {
-        });
-    }
-</script>
+<div class="green">
+  <div class="jumbotron">
+    <div class="container-narrow">
+      <h1> > Warning!</h1>
+      <p class="lead">Cras justo odio, dapibus ac facilisis in,
+        egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor
+        mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+      <a class="btn btn-large btn-success" href="#">Sign up today</a>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <br>
+  <center><h3>Palestras</h3></center>
+  <div class="row-fluid ">
+    <div class="span6">
+      <div class="span12 grupo">
+        <div class="span3"><img alt="140x100" data-src="holder.js/100x100" class="img-circle vip" style="width: 100px; height: 100px;" src="/assets/bruce.png">
+        </div>
+        <div class="span9 vip">
+          <h4>Subheading</h4>
+          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+        </div>
+      </div>
+      <div class="span12 grupo">
+        <div class="span3 pull-right"><img alt="140x100" data-src="holder.js/100x100" class="img-circle" style="width: 100px; height: 100px;" src="/assets/bruce.png">
+        </div>
+        <div class="span9">
+          <h4>Subheading</h4>
+          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+        </div>
+      </div>
+      <div class="span12 grupo">
+        <div class="span3"><img alt="140x100" data-src="holder.js/100x100" class="img-circle vip" style="width: 100px; height: 100px;" src="/assets/bruce.png">
+        </div>
+        <div class="span9 vip">
+          <h4>Subheading</h4>
+          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+        </div>
+      </div>
+    </div>
+    <div class="span6">
+      <div class="span12 grupo">
+        <div class="span3"><img alt="140x100" data-src="holder.js/100x100" class="img-circle vip" style="width: 100px; height: 100px;" src="/assets/bruce.png">
+        </div>
+        <div class="span9 vip">
+          <h4>Subheading</h4>
+          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+        </div>
+      </div>
+      <div class="span12 grupo">
+        <div class="span3 pull-right"><img alt="140x100" data-src="holder.js/100x100" class="img-circle vip" style="width: 100px; height: 100px;" src="/assets/bruce.png">
+        </div>
+        <div class="span9 vip">
+          <h4>Subheading</h4>
+          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+        </div>
+      </div>
+      <div class="span12 grupo">
+        <div class="span3"><img alt="140x100" data-src="holder.js/100x100" class="img-circle vip" style="width: 100px; height: 100px;" src="/assets/bruce.png">
+        </div>
+        <div class="span9 vip">
+          <h4>Subheading</h4>
+          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<form action="pagina.php" method="post">
-  <table class="table table-bordered" cellpadding="4" cellspacing="0" border="1">
-    <thead>
-        <tr>
-          <td>Nome</td>
-          <td>RG</td>
-          <td> </td>
-        </tr>
-    </thead>
-    <tbody id="repetir">
-        <tr id="linha_1">
-          <td><input type="text" name="nome[]" value="" /></td>
-          <td><input type="text" name="rg[]" value="" /></td>
-          <td><input type="button" value="Remover" id="remove" onclick="$.removeLinha(this);" /></td>
-        </tr>
-    </tbody>
-    <tfoot>
-        <tr>
-          <td align="right" colspan="5"><input type="button" value="Adicionar" id="add" /><input type="submit" value="Enviar" /></td>
-        </tr>
-    </tfoot>
-  </table>
-</form>
+  <hr>
+  <center><h3>Apoio</h3></center>
+  <div class="row-fluid marketing">
+
+    <img alt="140x140" data-src="holder.js/140x140" class="img" style="width: 140px; height: 140px;" src="/assets/logoruby.png">
+    <img alt="140x140" data-src="holder.js/140x140" class="img" style="width: 140px; height: 140px;" src="/assets/pando.jpg"><img alt="140x140" data-src="holder.js/140x140" class="img" style="width: 140px; height: 140px;" src="/assets/logoruby.png">
+    <img alt="140x140" data-src="holder.js/140x140" class="img" style="width: 140px; height: 140px;" src="/assets/pando.jpg"><img alt="140x140" data-src="holder.js/140x140" class="img" style="width: 140px; height: 140px;" src="/assets/logoruby.png">
+    <img alt="140x140" data-src="holder.js/140x140" class="img" style="width: 140px; height: 140px;" src="/assets/pando.jpg">
 
 
+  </div>
 
 
+</div>
+<hr>
+<div class="footer">
+  <p>© Company 2013</p>
+</div>
 
-<script>
-    $.removeLinha = function (element){
-        var linha_total = $('tbody#repetir tr').length;
-        if (linha_total > 1){
-            $(element).parent().parent().remove();
-        }else{
-            alert("Desculpe, mas você não pode remover esta última linha!");
-        }
-    };
-    $(document).ready(function()    {
-        var limite_linhas = 20;
-        $('#add').click(function(){
-            var linha_total = $('tbody#repetir tr').length;
-            if (limite_linhas && limite_linhas > linha_total){
-                var linha = $('tbody#repetir tr').html();
-                var linha_total = $('tbody#repetir tr').length;
-                var linha_id = $('tbody#repetir tr').attr('id');
-                $('tbody#repetir').append('<tr id="linha_' + (linha_total + 1) + '">' + linha + '</tr>');
-            }else{
-                alert("Desculpe, mas você só pode adicionar até " + limite_linhas + " linhas!");
-            }
-        });
-    });
-</script>
+</div> <!-- /container -->
